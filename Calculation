@@ -1,0 +1,22 @@
+package FirstSession;
+import java.util.*;
+public class Calculation {
+	public void calculate(long x) {
+    //user defined method is called
+		double days=0.0;
+		days=x/(60*24);
+		days=Math.round(days);//rounding the number of days
+		int years=0;
+		years=(int)days/365;//calculating the number of years
+		int extra=(int)days-(years*365);//calculating the extra days 
+		System.out.println("The result is: "+years+" years and "+extra+" days");
+	}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		long mins=0;
+		System.out.println("Enter the number of minutes");
+		mins=sc.nextLong();
+		Calculation ob = new Calculation();//object Creation
+		ob.calculate(mins);//calling the function calculate
+	}
+}
